@@ -1,8 +1,9 @@
 import React from "react";
 import Card from "./Card";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 const Feed = () => {
 
+  const [data,setData]=useState([])
 
 
   useEffect(()=>{
@@ -11,13 +12,14 @@ const Feed = () => {
       try {
         const response = await fetch("http://localhost:3000/api/news");
         const data = await response.json();
-        console.log(data); // Log the fetched data
+        console.log(data)
+        setData(data)
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     })()
     
-  })
+  },[])
 
   const Feedback = [
     {
@@ -34,7 +36,7 @@ const Feed = () => {
         Feedback Info
       </h1>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {Feedback.map((feedback, i) => (
+        {data.map((feedback, i) => (
           <Card
             key={i}
             name={feedback.name}
