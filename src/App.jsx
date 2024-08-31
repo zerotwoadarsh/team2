@@ -4,6 +4,7 @@ import { Button } from "./components/ui/button";
 import Feed from "./components/Feedback/Feed";
 import Home from "./components/Feedback/Home";
 import Navbar from "./components/Navbar/Navbar";
+import Analysis from "./components/Analysis/Analysis";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Feed />} />
+        <Route path="/analysis" element={<Analysis />} />
       </Routes>
     </Router>
   );
