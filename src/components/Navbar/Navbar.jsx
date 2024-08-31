@@ -24,21 +24,21 @@ const Navbar = () => {
                             <nav aria-label="Global" className="hidden md:block">
                                 <ul className="flex items-center gap-6 text-sm">
                                     <li>
-                                        <Link className="text-white transition hover:text-gray-500/75" to="/analysis">
+                                        <Link className="text-white transition hover:text-gray-500/75" to="/feed">
                                             Feed
                                         </Link>
 
                                     </li>
 
                                     <li>
-                                        <Link className="text-white transition hover:text-gray-500/75" to="/analysis">
+                                        <Link className="text-white transition hover:text-gray-500/75" to="/submit">
                                             Submit
                                         </Link>
 
                                     </li>
 
                                     <li>
-                                        <Link className="text-white transition hover:text-gray-500/75" to="/analysis">
+                                        <Link className="text-white transition hover:text-gray-500/75" to="/History">
                                             History
                                         </Link>
 
@@ -53,7 +53,7 @@ const Navbar = () => {
                                     </li>
 
                                     <li>
-                                        <Link className="text-white transition hover:text-gray-500/75" to="/analysis">
+                                        <Link className="text-white transition hover:text-gray-500/75" to="/help">
                                             Help
                                         </Link>
 

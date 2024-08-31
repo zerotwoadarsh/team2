@@ -40,6 +40,9 @@ const Hero1 = () => {
                     </div>
                 </div>
             </section>
+            <div className=" w-5 bg-white">
+
+            </div>
         </div>
     )
 }
