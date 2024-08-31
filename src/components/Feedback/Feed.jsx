@@ -2,11 +2,7 @@ import React from "react";
 import Card from "./Card";
 import { useEffect } from "react";
 const Feed = () => {
-
-
-
-  useEffect(()=>{
-
+  useEffect(() => {
     (async () => {
       try {
         const response = await fetch("http://localhost:3000/api/news");
@@ -15,19 +11,20 @@ const Feed = () => {
       } catch (error) {
         console.error("Error fetching data:", error);
       }
-    })()
-    
-  })
+    })();
+  });
 
   const Feedback = [
     {
       name: "Tarun Mehta",
       location: "Delhi",
-      discription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, illum quas atque at sapiente animi dolores laboriosam distinctio tempore temporibus praesentium iusto soluta accusamus perferendis impedit cumque assumenda expedita iste voluptate enim maiores sunt dicta! Quod sint modi pariatur, autem culpa cumque dolor soluta facilis.",
+      discription:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, illum quas atque at sapiente animi dolores laboriosam distinctio tempore temporibus praesentium iusto soluta accusamus perferendis impedit cumque assumenda expedita iste voluptate enim maiores sunt dicta! Quod sint modi pariatur, autem culpa cumque dolor soluta facilis.",
       FIR: "http://facebook.com",
     },
   ];
 
+  
   return (
     <div className="min-h-screen p-6 bg-gray-100">
       <h1 className="mb-8 text-3xl font-bold text-center text-gray-800">
