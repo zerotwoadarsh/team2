@@ -1,6 +1,24 @@
 import React from "react";
 import Card from "./Card";
+import { useEffect } from "react";
 const Feed = () => {
+
+
+
+  useEffect(()=>{
+
+    (async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/news");
+        const data = await response.json();
+        console.log(data); // Log the fetched data
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    })()
+    
+  })
+
   const Feedback = [
     {
       name: "Tarun Mehta",
