@@ -6,32 +6,31 @@ const Analysis = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
   const [hovered, setHovered] = useState(false);
+  const [dataSet, setDataSet] = useState([]); 
   const timeoutRef = useRef(null);
   const chartRef = useRef(null);
 
-  const url="http://localhost:3000/api/filter"
+  const url = "http://localhost:3000/api/analysis";
 
-  const dataSet = [
-    {
-      data: [25, 30, 45, 60, 20, 65, 75],
-    },
-    {
-        data: [25, 30, 45, 60, 20, 65, 75],
-      },
-  ];
-
-  useEffect(()=>{
-    (async ()=>{
-        try {
-            const response = await fetch(url);
-            const data = await response.json();
-            console.log(data)
-            setData(data)
-        } catch (error) {
-            console.error("Error fetching data:", error);
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
         }
-    })()
-  })
+        const data = await response.json();
+        console.log("Fetched data:", data);
+
+        // Convert the data to an array of objects for the chart
+        const processedData = data.map(d => ({ data: d }));
+
+        setDataSet(processedData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    })();
+  }, []);
 
   const handleMouseEnter = useCallback((content) => {
     if (timeoutRef.current) {
@@ -48,7 +47,7 @@ const Analysis = () => {
       if (!hovered) {
         setIsModalOpen(false);
       }
-    }, 200); // Adjust the delay as needed
+    }, 200);
   }, [hovered]);
 
   return (
@@ -67,9 +66,11 @@ const Analysis = () => {
           </div>
         ))}
       </div>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        {modalContent}
-      </Modal>
+      {isModalOpen && (
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          {modalContent}
+        </Modal>
+      )}
     </div>
   );
 };
