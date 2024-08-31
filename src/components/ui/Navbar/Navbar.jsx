@@ -3,11 +3,11 @@ import React from 'react'
 const Navbar = () => {
     return (
         <div>
-            <header class="bg-white dark:bg-gray-900">
+            <header class="bg-black">
                 <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                     <div class="flex h-16 items-center justify-between">
                         <div class="flex-1 md:flex md:items-center md:gap-12">
-                            <a class="block text-teal-600 dark:text-teal-300" href="#">
+                            <a class="block text-white dark:text-teal-300" href="#">
                                 <span class="sr-only">Home</span>
                                 <svg class="h-8" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -23,7 +23,7 @@ const Navbar = () => {
                                 <ul class="flex items-center gap-6 text-sm">
                                     <li>
                                         <a
-                                            class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                                            class="text-white transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
                                             href="#"
                                         >
                                             Feed
@@ -32,7 +32,7 @@ const Navbar = () => {
 
                                     <li>
                                         <a
-                                            class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                                            class="text-white transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
                                             href="#"
                                         >
                                             Submit
@@ -41,7 +41,7 @@ const Navbar = () => {
 
                                     <li>
                                         <a
-                                            class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                                            class="text-white transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
                                             href="#"
                                         >
                                             History
@@ -50,7 +50,7 @@ const Navbar = () => {
 
                                     <li>
                                         <a
-                                            class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                                            class="text-white transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
                                             href="#"
                                         >
                                             Services
@@ -59,7 +59,7 @@ const Navbar = () => {
 
                                     <li>
                                         <a
-                                            class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                                            class="text-white transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
                                             href="#"
                                         >
                                             Help
@@ -71,7 +71,7 @@ const Navbar = () => {
                             <div class="flex items-center gap-4">
                                 <div class="sm:flex sm:gap-4">
                                     <a
-                                        class="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-teal-500"
+                                        class="rounded-md bg-teal-600 px-3 py-1.5 text-sm font-medium text-white shadow"
                                         href="#"
                                     >
                                         Submit
