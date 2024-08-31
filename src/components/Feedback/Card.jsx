@@ -7,7 +7,7 @@ const Card = ({ name, location, discription, FIR }) => {
         <div className="p-2">
           <h2 className="text-xl font-bold text-gray-800">{name}</h2>
           <p className="mt-2 text-base text-custom-green">{location}</p>
-          <p className="h-40 mt-2 overflow-scroll text-base text-gray-600">{discription}</p>
+          <p className="h-40 mt-2 overflow-y-scroll text-base text-gray-600">{discription}</p>
         </div>
         <a
           href={FIR}
