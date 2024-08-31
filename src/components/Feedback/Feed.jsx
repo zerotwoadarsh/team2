@@ -5,7 +5,7 @@ const Feed = () => {
     {
       name: "Tarun Mehta",
       location: "Delhi",
-      discription: "edfsadfs",
+      discription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, illum quas atque at sapiente animi dolores laboriosam distinctio tempore temporibus praesentium iusto soluta accusamus perferendis impedit cumque assumenda expedita iste voluptate enim maiores sunt dicta! Quod sint modi pariatur, autem culpa cumque dolor soluta facilis.",
       FIR: "http://facebook.com",
     },
   ];
