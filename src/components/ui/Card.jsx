@@ -15,7 +15,7 @@ const Card = ({ name, location, discription, FIR }) => {
           <p className="text-base text-custom-green">{location}</p>
           <p className="text-base text-custom-green">{discription}</p>
         </div>
-        <a href={FIR} className="object-cover w-full h-full mb-4 rounded-xl" />
+        <a href={FIR} className="object-cover w-full h-full mb-4 rounded-xl" target="_blank"> FIR link </a>
       </div>
     </div>
   );
