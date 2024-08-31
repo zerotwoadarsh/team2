@@ -76,11 +76,7 @@ const Navbar = () => {
                                         href="https://forms.gle/cctVEdKLeTwANULo7"
                                         target="_blank"
                                     >
-<<<<<<< HEAD
-                                        Report Cyber Crime 
-=======
                                         Report Cyber Crime
->>>>>>> afb677ed6b204f09954d0c7824b68dc5f5dec2ed
                                     </a>
                                 </div>
 
