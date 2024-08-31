@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,13 +78,13 @@ const Navbar = () => {
 
               <div className="flex items-center gap-4">
                 <div className="sm:flex sm:gap-4">
-                  <a
+                  <Link
                     className="rounded-md bg-teal-600 px-3 py-1.5 text-sm font-medium text-white shadow"
-                    href="https://forms.gle/cctVEdKLeTwANULo7"
                     target="_blank"
+                    to="/form"
                   >
                     Report Cyber Crime
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="block md:hidden">
