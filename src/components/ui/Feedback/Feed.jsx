@@ -11,9 +11,11 @@ const Feed = () => {
   ];
 
   return (
-    <div>
-      <h1 className=""> Feedback info</h1>
-      <div className="grid grid-cols-1 gap-6 py-4 mt-5 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="min-h-screen p-6 bg-gray-100">
+      <h1 className="mb-8 text-3xl font-bold text-center text-gray-800">
+        Feedback Info
+      </h1>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {Feedback.map((feedback, i) => (
           <Card
             key={i}
