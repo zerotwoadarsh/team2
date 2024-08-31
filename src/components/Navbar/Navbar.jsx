@@ -76,7 +76,7 @@ const Navbar = () => {
                                         className="rounded-md bg-teal-600 px-3 py-1.5 text-sm font-medium text-white shadow"
                                         href="#"
                                     >
-                                        Submit
+                                        Report Cyber Crime 
                                     </a>
                                 </div>
 
