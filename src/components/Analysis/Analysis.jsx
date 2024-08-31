@@ -10,6 +10,8 @@ const Analysis = () => {
   const timeoutRef = useRef(null);
   const chartRef = useRef(null);
 
+  
+
   const url = "http://localhost:3000/api/analysis";
 
   useEffect(() => {
@@ -23,7 +25,11 @@ const Analysis = () => {
         console.log("Fetched data:", data);
 
         // Convert the data to an array of objects for the chart
-        const processedData = data.map(d => ({ data: d }));
+        const processedData = [
+          { label: 'Type', data: data.typeCounts },
+          { label: 'Location', data: data.locationCounts },
+          { label: 'Sector', data: data.sectorCounts }
+        ];
 
         setDataSet(processedData);
       } catch (error) {
