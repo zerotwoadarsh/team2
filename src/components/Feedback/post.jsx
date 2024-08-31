@@ -8,7 +8,7 @@ const Feed = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/news");
+        const response = await fetch("http://localhost:3000/api/userpost");
         const data = await response.json();
         console.log(data)
         setData(data)
@@ -37,11 +37,11 @@ const Feed = () => {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {data.map((feedback) => (
           <Card
-            key={feedback.title}
-            name={feedback.title}
-            location={feedback.title}
-            discription={feedback.description}
-            FIR={feedback.title}
+            key={feedback.name}
+            name={feedback.name}
+            location={feedback.location}
+            discription={feedback.discription}
+            FIR={feedback.FIR}
           />
         ))}
       </div>
