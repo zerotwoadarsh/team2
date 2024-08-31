@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import BarChart from './Charts/BarChart';
 import Modal from './Modal';
 
@@ -9,6 +9,8 @@ const Analysis = () => {
   const timeoutRef = useRef(null);
   const chartRef = useRef(null);
 
+  const url="http://localhost:3000/api/filter"
+
   const dataSet = [
     {
       data: [25, 30, 45, 60, 20, 65, 75],
@@ -17,6 +19,19 @@ const Analysis = () => {
         data: [25, 30, 45, 60, 20, 65, 75],
       },
   ];
+
+  useEffect(()=>{
+    (async ()=>{
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            console.log(data)
+            setData(data)
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+    })()
+  })
 
   const handleMouseEnter = useCallback((content) => {
     if (timeoutRef.current) {

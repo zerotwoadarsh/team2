@@ -12,7 +12,7 @@ const Navbar = () => {
                             <a className="block text-white dark:text-teal-300" href="#">
                                 <span className="sr-only">Home</span>
                                 <svg width="250" height="60" xmlns="http://www.w3.org/2000/svg">
-                                    <text x="10" y="40" font-family="'Courier New', Courier, monospace" font-size="30" fill="white" font-weight="bold">
+                                    <text x="10" y="40" fontFamily="'Courier New', Courier, monospace" fontSize="30" fill="white" fontWeight="bold">
                                         CyberWatch
                                     </text>
                                 </svg>
@@ -93,6 +93,7 @@ const Navbar = () => {
                                             stroke="currentColor"
                                             strokeWidth="2"
                                         >
+                                        
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
