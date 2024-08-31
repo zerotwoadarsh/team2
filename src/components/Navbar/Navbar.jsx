@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -9,62 +10,53 @@ const Navbar = () => {
                 <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 items-center justify-between">
                         <div className="flex-1 md:flex md:items-center md:gap-12">
-                            <a className="block text-white dark:text-teal-300" href="#">
-                                <span className="sr-only">Home</span>
+                            <Link className="block text-white dark:text-teal-300" to="/">
                                 <svg width="250" height="60" xmlns="http://www.w3.org/2000/svg">
                                     <text x="10" y="40" fontFamily="'Courier New', Courier, monospace" fontSize="30" fill="white" fontWeight="bold">
                                         CyberWatch
                                     </text>
                                 </svg>
 
-                            </a>
+
+                            </Link>
                         </div>
                         <div className="md:flex md:items-center md:gap-12">
                             <nav aria-label="Global" className="hidden md:block">
                                 <ul className="flex items-center gap-6 text-sm">
                                     <li>
-                                        <a
-                                            className="text-white transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            href="#"
-                                        >
+                                        <Link className="text-white transition hover:text-gray-500/75" to="/analysis">
                                             Feed
-                                        </a>
+                                        </Link>
+
                                     </li>
 
                                     <li>
-                                        <a
-                                            className="text-white transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            href="#"
-                                        >
+                                        <Link className="text-white transition hover:text-gray-500/75" to="/analysis">
                                             Submit
-                                        </a>
+                                        </Link>
+
                                     </li>
 
                                     <li>
-                                        <a
-                                            className="text-white transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            href="#"
-                                        >
+                                        <Link className="text-white transition hover:text-gray-500/75" to="/analysis">
                                             History
-                                        </a>
+                                        </Link>
+
                                     </li>
 
                                     <li>
-                                        <a
-                                            className="text-white transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            href="#"
-                                        >
+
+                                        <Link className="text-white transition hover:text-gray-500/75" to="/analysis">
                                             Analysis
-                                        </a>
+                                        </Link>
+
                                     </li>
 
                                     <li>
-                                        <a
-                                            className="text-white transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                                            href="#"
-                                        >
+                                        <Link className="text-white transition hover:text-gray-500/75" to="/analysis">
                                             Help
-                                        </a>
+                                        </Link>
+
                                     </li>
                                 </ul>
                             </nav>
@@ -93,7 +85,7 @@ const Navbar = () => {
                                             stroke="currentColor"
                                             strokeWidth="2"
                                         >
-                                        
+
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"

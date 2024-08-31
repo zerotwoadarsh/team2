@@ -5,7 +5,7 @@ const Hero2 = () => {
         <div>
 
             <section
-                className="relative bg-[url(https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)] 
+                className="relative bg-[url(https://media.istockphoto.com/id/1331172529/photo/hacked-by-india.jpg?s=1024x1024&w=is&k=20&c=ZfzkS4IQfevO_vcPgq-960P2mgiHu-F_c-mMlYrAP4M=)] 
                 w-100 bg-cover bg-center bg-no-repeat"
             >
                 <div
