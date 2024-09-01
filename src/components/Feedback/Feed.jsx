@@ -7,54 +7,35 @@ import Reddit from "./Reddit";
 import News from "./News";
 import Users from "./Users";
 const Feed = () => {
+    const [tab, setTab] = useState("reddit");
 
-  const [data, setCom] = useState("reddit");
+    const buttons = ["reddit", "users", "news"];
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await fetch("http://localhost:3000/api/news");
-        const data = await response.json();
-        console.log(data)
-        setCom(data)
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    })();
-  }, []);
-
-  return (
-    <div>
-      <div className=" bg-gray-100">
-        <h1 className=" text-6xl font-bold text-center bg-gray-700 h-24 rounded-lg flex items-center justify-center">
-          Feed
-        </h1>
-        <div className="flex justify-evenly h-10 bg-slate-500 items-center mb-5 rounded-lg">
-          <span className=" w-1/3 hover:bg-slate-700 hover:cursor-pointer flex items-center justify-center rounded-lg h-full">
-            <button onClick={()=>{setCom("reddit")}} className=" font-semibold text-white w-5">
-              Reddit
-            </button>
-          </span>
-          <span className=" w-1/3 hover:bg-slate-700 hover:cursor-pointer flex items-center justify-center rounded-lg h-full">
-            <button onClick={()=>{setCom("users")}} className=" font-semibold text-white w-5">
-              Users
-            </button>
-          </span>
-          <span className=" w-1/3 hover:bg-slate-700 hover:cursor-pointer flex items-center justify-center rounded-lg h-full">
-            <button onClick={()=>{setCom("news")}} className=" font-semibold text-white w-5">
-              News
-            </button>
-          </span>
+    return (
+        <div>
+            <div className="flex justify-center p-2">
+                <div className="flex border-2 rounded-full max-w-fit p-1 px-2">
+                    {buttons.map((btn) => {
+                        return (
+                            <button
+                                key={btn}
+                                onClick={() => {
+                                    setTab(btn);
+                                }}
+                                className={`${tab == btn ? "bg-blue-500" : ""}
+                        rounded-full p-2 px-4 font-semibold`}
+                            >
+                                {btn}
+                            </button>
+                        );
+                    })}
+                </div>
+            </div>
+            {tab == "reddit" && <Reddit />}
+            {tab == "users" && <Users />}
+            {tab == "news" && <News />}
         </div>
-        
-
-      </div>
-      {data=="reddit" && <Reddit/>}
-      {data=="users" && <Users/>}
-      {data=="news" && <News/>}
-    </div>
-
-  );
+    );
 };
 
 export default Feed;

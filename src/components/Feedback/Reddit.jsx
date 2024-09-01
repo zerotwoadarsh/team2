@@ -21,17 +21,17 @@ const Reddit = () => {
         };
 
         fetchData();
-    }, []); // Empty array ensures this runs only once on mount
+    }, []);
 
     return (
-        <div>
-            {data.map((feedback) => (
+        <div className='p-4 justify-center flex flex-wrap gap-4 bg-gray-200'>
+            {data.map((feed) => (
                 <Card
-                    key={feedback.id} // Ensure 'id' or another unique identifier is used
-                    name={feedback.title}
-                    location={feedback.location} // Assuming you have a 'location' field
-                    description={feedback.body}
-                    FIR={feedback.url} // Ensure you have a 'FIR' field or adjust as needed
+                    key={feed.id} 
+                    name={feed.title}
+                    body={feed.body}
+                    url={feed.url}
+                    sec={feed.created}
                 />
             ))}
         </div>

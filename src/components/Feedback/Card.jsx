@@ -1,20 +1,28 @@
 import React from "react";
 
-const Card = ({ name, location, body, url }) => {
-  return (
-    <div className="flex flex-col overflow-hidden transition-transform transform bg-white shadow-lg rounded-xl hover:-translate-y-2 hover:shadow-2xl">
-      <div className="w-full h-1/4">
-        <div className="p-2">
-          <h2 className="text-xl font-bold text-gray-800">{name}</h2>
-          <p className="mt-2 text-base text-custom-green">{location}</p>
-          <p className="h-40 mt-2 overflow-y-scroll text-base text-gray-600">{body}</p>
+const Card = ({ name, body, url, sec }) => {
+    return (
+        <div className="flex flex-col overflow-hidden gap-2 transition-transform transform text bg-gray-50 shadow-sm rounded-lg max-w-1/2">
+            <div className="w-full max-h-1/2 p-4 flex flex-col gap-2 items-start">
+                <div className="p-2">
+                    <h2 className="text-xl font-bold text-gray-800">{name}</h2>
+                    <pre className="whitespace-pre-wrap overflow-auto max-h-80  leading-normal  mt-2 overflow-y-scroll text-base text-gray-600">
+                        {body}
+                    </pre>
+                </div>
+                <div className="flex justify-between self-stretch px-6">
+                    <a href={url} className="border-2 rounded-lg p-2">
+                        source
+                    </a>
+                    <div>
+                        {new Date(sec * 1000).toLocaleString("en-GB", {
+                            timeZone: "UTC",
+                        })}
+                    </div>
+                </div>
+            </div>
         </div>
-        
-          FIR Link
-        
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Card;
