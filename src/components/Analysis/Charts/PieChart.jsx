@@ -1,12 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 
-const PieChart = () => {
+const PieChart = (data) => {
   const svgRef = useRef();
-
+  console.log(data);
   useEffect(() => {
-    const data = [10, 20, 30, 40, 50];
-
+    const data = [12,3,4,5,6,7,8,9,10];
     
     const width = 300;
     const height = 300;
