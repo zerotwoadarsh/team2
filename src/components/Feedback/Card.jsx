@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ name, body, url, sec }) => {
     return (
-        <div className="flex flex-col overflow-hidden gap-2 transition-transform transform text bg-gray-50 shadow-sm rounded-lg max-w-1/2">
+        <div className="flex flex-col overflow-hidden gap-2 transition-transform transform text bg-gray-50 shadow-sm rounded-lg max-w-[600px]">
             <div className="w-full max-h-1/2 p-4 flex flex-col gap-2 items-start">
                 <div className="p-2">
                     <h2 className="text-xl font-bold text-gray-800">{name}</h2>
