@@ -8,7 +8,7 @@ const Feed = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/userpost");
+        const response = await fetch("https://team2backend-production.up.railway.app/api/userpost");
         const data = await response.json();
         console.log(data)
         setData(data)

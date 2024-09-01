@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Card from './Card';
 
 const News = () => {
-    const url = "http://localhost:3000/api/news";
+    const url = "https://team2backend-production.up.railway.app/api/news";
     const [data, setData] = useState([]);
 
     useEffect(() => {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Card from './Card';
 
 const Reddit = () => {
-    const url = "http://localhost:3000/api/getRedditPost";
+    const url = "https://team2backend-production.up.railway.app/api/getRedditPost";
     const [data, setData] = useState([]);
 
     useEffect(() => {

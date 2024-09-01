@@ -10,7 +10,7 @@ const Charts = () => {
 
   useEffect(() => {
     // Fetch data from API
-    fetch('http://localhost:3000/api/analysis')
+    fetch('https://team2backend-production.up.railway.app/api/analysis')
       .then(response => response.json())
       .then(data => {
         createBarChart(chartRefs.barChart.current, data.typeCounts.slice(0, 5)); // Top 5 types

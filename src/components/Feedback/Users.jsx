@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const Users = () => {
-    const url = "http://localhost:3000/api/userpost";
+    const url = "https://team2backend-production.up.railway.app/api/userpost";
     const [data, setData] = useState([]);
 
     useEffect(() => {
