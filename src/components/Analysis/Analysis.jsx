@@ -38,23 +38,6 @@ const Analysis = () => {
     })();
   }, []);
 
-  const handleMouseEnter = useCallback((content) => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    setModalContent(content);
-    setIsModalOpen(true);
-    setHovered(true);
-  }, []);
-
-  const handleMouseLeave = useCallback(() => {
-    setHovered(false);
-    timeoutRef.current = setTimeout(() => {
-      if (!hovered) {
-        setIsModalOpen(false);
-      }
-    }, 200);
-  }, [hovered]);
 
   return (
     <div className="p-6">
@@ -65,8 +48,6 @@ const Analysis = () => {
             key={i}
             ref={chartRef}
             className="relative p-4 cursor-pointer hover:opacity-80"
-            onMouseEnter={() => handleMouseEnter(<BarChart data={data.data} />)}
-            onMouseLeave={handleMouseLeave}
           >
             <BarChart data={data.data} />
           </div>
