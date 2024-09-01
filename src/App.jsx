@@ -1,6 +1,5 @@
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
-import { Button } from "./components/ui/button";
 import Feed from "./components/Feedback/Feed";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";

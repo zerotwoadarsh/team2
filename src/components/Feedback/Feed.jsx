@@ -1,9 +1,10 @@
 import React from "react";
 import Card from "./Card";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const Feed = () => {
 
-  const [data,setData]=useState([])
+  const [data, setData] = useState([])
 
   useEffect(() => {
     (async () => {
@@ -16,24 +17,30 @@ const Feed = () => {
         console.error("Error fetching data:", error);
       }
     })();
-  },[]);
+  }, []);
 
-  // const Feedback = [
-  //   {
-  //     name: "Tarun Mehta",
-  //     location: "Delhi",
-  //     discription:
-  //       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, illum quas atque at sapiente animi dolores laboriosam distinctio tempore temporibus praesentium iusto soluta accusamus perferendis impedit cumque assumenda expedita iste voluptate enim maiores sunt dicta! Quod sint modi pariatur, autem culpa cumque dolor soluta facilis.",
-  //     FIR: "http://facebook.com",
-  //   },
-  // ];
-
-  
   return (
-    <div className="min-h-screen p-6 bg-gray-100">
-      <h1 className="mb-8 text-3xl font-bold text-center text-gray-800">
-        Feedback Info
+    <div className="min-h-screen bg-gray-100">
+      <h1 className=" text-6xl font-bold text-center bg-gray-700 h-24 rounded-lg flex items-center justify-center">
+        Feed
       </h1>
+      <div className="flex justify-evenly h-10 bg-slate-500 items-center mb-5 rounded-lg">
+        <span className=" w-1/3 hover:bg-slate-700 hover:cursor-pointer flex items-center justify-center rounded-lg h-full">
+          <button className=" font-semibold text-white w-5">
+            <Link to="/">Reddit</Link>
+          </button>
+        </span>
+        <span className=" w-1/3 hover:bg-slate-700 hover:cursor-pointer flex items-center justify-center rounded-lg h-full">
+          <button className=" font-semibold text-white w-5">
+            <Link to="/">User</Link>
+          </button>
+        </span>
+        <span className=" w-1/3 hover:bg-slate-700 hover:cursor-pointer flex items-center justify-center rounded-lg h-full">
+          <button className=" font-semibold text-white w-5">
+            <Link to="/">News</Link>
+          </button>
+        </span>
+      </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {data.map((feedback) => (
           <Card
